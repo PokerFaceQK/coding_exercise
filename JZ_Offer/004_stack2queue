@@ -1,0 +1,12 @@
+题目描述
+用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。
+
+最初思路：
+每当需要push的时候，在stack1中完成（如果stack2中有元素则倒回stack1）
+每当需要pop的时候，在stack2中完成（如果stack1中有元素则倒入stack2）
+此方法每进行一次操作则需要移动所有元素一次
+
+参考思路：
+需要push时只用往stack1进行push
+需要pop的时候则从stack2往外pop
+当stack2为空，将stack1的所有元素倒入stack2
